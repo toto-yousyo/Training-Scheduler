@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "training-schedule-7f03b",
     "public": "public",
     "ignore": [
       "firebase.json",
