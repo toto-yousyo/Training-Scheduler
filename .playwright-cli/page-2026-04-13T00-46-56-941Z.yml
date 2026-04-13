@@ -1,0 +1,212 @@
+- generic [ref=e3]:
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - img [ref=e8]
+        - heading "研修スケジュール共有アプリ" [level=1] [ref=e10]
+      - button "予定を追加" [active] [ref=e11]:
+        - img [ref=e12]
+        - text: 予定を追加
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - heading "毎日の基本ルーティン" [level=2] [ref=e15]:
+        - img [ref=e16]
+        - text: 毎日の基本ルーティン
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - generic [ref=e21]: 8:50
+          - generic [ref=e22]:
+            - paragraph [ref=e23]: 朝礼
+            - paragraph [ref=e24]: 10分間
+        - generic [ref=e25]:
+          - generic [ref=e26]: 9:00
+          - generic [ref=e27]:
+            - paragraph [ref=e28]: 日報・連絡事項
+            - paragraph [ref=e29]: 〜10:00
+        - generic [ref=e30]:
+          - generic [ref=e31]: お昼
+          - generic [ref=e32]:
+            - paragraph [ref=e33]: 休憩（1時間）
+            - paragraph [ref=e34]: ※研修内容により変動
+        - generic [ref=e35]:
+          - generic [ref=e36]: 17:00
+          - generic [ref=e37]:
+            - paragraph [ref=e38]: 日報作成
+            - paragraph [ref=e39]: 〜17:30
+        - generic [ref=e40]:
+          - generic [ref=e41]: 17:30
+          - generic [ref=e42]:
+            - paragraph [ref=e43]: 復習まとめ
+            - paragraph [ref=e44]: 〜17:45
+        - generic [ref=e45]:
+          - generic [ref=e46]: 週1回
+          - generic [ref=e47]:
+            - paragraph [ref=e48]: メンター 1on1
+            - paragraph [ref=e49]: 30分～1時間程度
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - button [ref=e52]:
+          - img [ref=e53]
+        - heading "2026年 5月" [level=2] [ref=e55]
+        - button [ref=e56]:
+          - img [ref=e57]
+      - generic [ref=e59]:
+        - paragraph [ref=e60]: まだ予定が登録されていません。
+        - button "2026年5月の初期データを読み込む" [ref=e61]
+      - generic [ref=e62]:
+        - generic [ref=e63]: 日
+        - generic [ref=e64]: 月
+        - generic [ref=e65]: 火
+        - generic [ref=e66]: 水
+        - generic [ref=e67]: 木
+        - generic [ref=e68]: 金
+        - generic [ref=e69]: 土
+        - generic [ref=e76] [cursor=pointer]:
+          - generic [ref=e78]: "1"
+          - button "予定を追加" [ref=e79]:
+            - img [ref=e80]
+        - generic [ref=e83] [cursor=pointer]:
+          - generic [ref=e85]: "2"
+          - button "予定を追加" [ref=e86]:
+            - img [ref=e87]
+        - generic [ref=e90] [cursor=pointer]:
+          - generic [ref=e92]: "3"
+          - button "予定を追加" [ref=e93]:
+            - img [ref=e94]
+        - generic [ref=e97] [cursor=pointer]:
+          - generic [ref=e99]: "4"
+          - button "予定を追加" [ref=e100]:
+            - img [ref=e101]
+        - generic [ref=e104] [cursor=pointer]:
+          - generic [ref=e106]: "5"
+          - button "予定を追加" [ref=e107]:
+            - img [ref=e108]
+        - generic [ref=e111] [cursor=pointer]:
+          - generic [ref=e113]: "6"
+          - button "予定を追加" [ref=e114]:
+            - img [ref=e115]
+        - generic [ref=e118] [cursor=pointer]:
+          - generic [ref=e120]: "7"
+          - button "予定を追加" [ref=e121]:
+            - img [ref=e122]
+        - generic [ref=e125] [cursor=pointer]:
+          - generic [ref=e127]: "8"
+          - button "予定を追加" [ref=e128]:
+            - img [ref=e129]
+        - generic [ref=e132] [cursor=pointer]:
+          - generic [ref=e134]: "9"
+          - button "予定を追加" [ref=e135]:
+            - img [ref=e136]
+        - generic [ref=e139] [cursor=pointer]:
+          - generic [ref=e141]: "10"
+          - button "予定を追加" [ref=e142]:
+            - img [ref=e143]
+        - generic [ref=e146] [cursor=pointer]:
+          - generic [ref=e148]: "11"
+          - button "予定を追加" [ref=e149]:
+            - img [ref=e150]
+        - generic [ref=e153] [cursor=pointer]:
+          - generic [ref=e155]: "12"
+          - button "予定を追加" [ref=e156]:
+            - img [ref=e157]
+        - generic [ref=e160] [cursor=pointer]:
+          - generic [ref=e162]: "13"
+          - button "予定を追加" [ref=e163]:
+            - img [ref=e164]
+        - generic [ref=e167] [cursor=pointer]:
+          - generic [ref=e169]: "14"
+          - button "予定を追加" [ref=e170]:
+            - img [ref=e171]
+        - generic [ref=e174] [cursor=pointer]:
+          - generic [ref=e176]: "15"
+          - button "予定を追加" [ref=e177]:
+            - img [ref=e178]
+        - generic [ref=e181] [cursor=pointer]:
+          - generic [ref=e183]: "16"
+          - button "予定を追加" [ref=e184]:
+            - img [ref=e185]
+        - generic [ref=e188] [cursor=pointer]:
+          - generic [ref=e190]: "17"
+          - button "予定を追加" [ref=e191]:
+            - img [ref=e192]
+        - generic [ref=e195] [cursor=pointer]:
+          - generic [ref=e197]: "18"
+          - button "予定を追加" [ref=e198]:
+            - img [ref=e199]
+        - generic [ref=e202] [cursor=pointer]:
+          - generic [ref=e204]: "19"
+          - button "予定を追加" [ref=e205]:
+            - img [ref=e206]
+        - generic [ref=e209] [cursor=pointer]:
+          - generic [ref=e211]: "20"
+          - button "予定を追加" [ref=e212]:
+            - img [ref=e213]
+        - generic [ref=e216] [cursor=pointer]:
+          - generic [ref=e218]: "21"
+          - button "予定を追加" [ref=e219]:
+            - img [ref=e220]
+        - generic [ref=e223] [cursor=pointer]:
+          - generic [ref=e225]: "22"
+          - button "予定を追加" [ref=e226]:
+            - img [ref=e227]
+        - generic [ref=e230] [cursor=pointer]:
+          - generic [ref=e232]: "23"
+          - button "予定を追加" [ref=e233]:
+            - img [ref=e234]
+        - generic [ref=e237] [cursor=pointer]:
+          - generic [ref=e239]: "24"
+          - button "予定を追加" [ref=e240]:
+            - img [ref=e241]
+        - generic [ref=e244] [cursor=pointer]:
+          - generic [ref=e246]: "25"
+          - button "予定を追加" [ref=e247]:
+            - img [ref=e248]
+        - generic [ref=e251] [cursor=pointer]:
+          - generic [ref=e253]: "26"
+          - button "予定を追加" [ref=e254]:
+            - img [ref=e255]
+        - generic [ref=e258] [cursor=pointer]:
+          - generic [ref=e260]: "27"
+          - button "予定を追加" [ref=e261]:
+            - img [ref=e262]
+        - generic [ref=e265] [cursor=pointer]:
+          - generic [ref=e267]: "28"
+          - button "予定を追加" [ref=e268]:
+            - img [ref=e269]
+        - generic [ref=e272] [cursor=pointer]:
+          - generic [ref=e274]: "29"
+          - button "予定を追加" [ref=e275]:
+            - img [ref=e276]
+        - generic [ref=e279] [cursor=pointer]:
+          - generic [ref=e281]: "30"
+          - button "予定を追加" [ref=e282]:
+            - img [ref=e283]
+        - generic [ref=e286] [cursor=pointer]:
+          - generic [ref=e288]: "31"
+          - button "予定を追加" [ref=e289]:
+            - img [ref=e290]
+  - generic [ref=e293]:
+    - generic [ref=e294]:
+      - heading "予定を追加" [level=3] [ref=e295]
+      - button [ref=e296]:
+        - img [ref=e297]
+    - generic [ref=e300]:
+      - generic [ref=e301]:
+        - generic [ref=e302]: 日付
+        - textbox [ref=e303]
+      - generic [ref=e304]:
+        - generic [ref=e305]: タイトル
+        - textbox "例：通常研修、新入社員歓迎会" [ref=e306]
+      - generic [ref=e307]:
+        - generic [ref=e308]: 種類
+        - combobox [ref=e309]:
+          - option "通常研修 (青)" [selected]
+          - option "重要な予定/研修 (黄)"
+          - option "イベント/行事 (ピンク)"
+          - option "休日/代休 (緑)"
+      - generic [ref=e310]:
+        - generic [ref=e311]: メモ・詳細（任意）
+        - textbox "参加者や持ち物、詳細な時間など" [ref=e312]
+      - generic [ref=e314]:
+        - button "キャンセル" [ref=e315]
+        - button "保存する" [ref=e316]

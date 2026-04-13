@@ -1,0 +1,8 @@
+- generic [ref=e4]:
+  - img [ref=e5]
+  - generic [ref=e7]:
+    - heading "研修スケジュール" [level=1] [ref=e8]
+    - paragraph [ref=e9]: Googleアカウントでログインしてください
+  - button "Google Googleでログイン" [ref=e10]:
+    - img "Google" [ref=e11]
+    - text: Googleでログイン

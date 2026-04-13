@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 許可リストに含まれているかチェック
+    function isAllowed(appId) {
+      return request.auth != null &&
+        request.auth.token.email in
+          get(/databases/$(database)/documents/artifacts/$(appId)/config/allowlist).data.emails;
+    }
+
+    // 許可リストドキュメント自体のアクセス制御
+    match /artifacts/{appId}/config/allowlist {
+      // 認証済みなら誰でも読める（ログイン直後に自分が許可されているか確認するため）
+      allow read: if request.auth != null;
+      // 新規作成: 認証済みなら可（初回シード用）
+      allow create: if request.auth != null;
+      // 更新・削除: 許可リストに含まれているユーザーのみ
+      allow update, delete: if request.auth != null &&
+        request.auth.token.email in resource.data.emails;
+    }
+
+    // 研修予定データ: 許可リストに含まれているユーザーのみ
+    match /artifacts/{appId}/public/data/training_events/{docId} {
+      allow read, write: if isAllowed(appId);
+    }
+  }
+}
