@@ -81,7 +81,7 @@ export default function App() {
   // 予定モーダル
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingEvent, setEditingEvent] = useState(null);
-  const [formData, setFormData] = useState({ date: "", title: "", type: "normal", description: "" });
+  const [formData, setFormData] = useState({ date: "", title: "", type: "normal", description: "", startTime: "", endTime: "" });
 
   // 管理画面モーダル
   const [isAdminOpen, setIsAdminOpen] = useState(false);
@@ -193,10 +193,10 @@ export default function App() {
   const openModal = (dateStr = "", event = null) => {
     if (event) {
       setEditingEvent(event);
-      setFormData({ date: event.date, title: event.title, type: event.type, description: event.description || "" });
+      setFormData({ date: event.date, title: event.title, type: event.type, description: event.description || "", startTime: event.startTime || "", endTime: event.endTime || "" });
     } else {
       setEditingEvent(null);
-      setFormData({ date: dateStr, title: "", type: "normal", description: "" });
+      setFormData({ date: dateStr, title: "", type: "normal", description: "", startTime: "", endTime: "" });
     }
     setIsModalOpen(true);
   };
@@ -288,7 +288,10 @@ export default function App() {
   for (let i = 0; i < firstDayOfWeek; i++) calendarCells.push({ type: "empty", key: `empty-${i}` });
   for (let i = 1; i <= daysInMonth; i++) {
     const dateStr = `${year}-${String(month + 1).padStart(2, "0")}-${String(i).padStart(2, "0")}`;
-    calendarCells.push({ type: "date", date: i, dateStr, events: events.filter((e) => e.date === dateStr), dayOfWeek: new Date(year, month, i).getDay(), key: `date-${i}` });
+    const dayEvents = events
+      .filter((e) => e.date === dateStr)
+      .sort((a, b) => (a.startTime || "99:99").localeCompare(b.startTime || "99:99"));
+    calendarCells.push({ type: "date", date: i, dateStr, events: dayEvents, dayOfWeek: new Date(year, month, i).getDay(), key: `date-${i}` });
   }
 
   const getEventColors = (type) => {
@@ -497,6 +500,12 @@ export default function App() {
                         onClick={(e) => { e.stopPropagation(); openModal(dateStr, ev); }}
                         className={`p-1.5 rounded border text-xs md:text-sm leading-tight shadow-sm hover:shadow transition-shadow cursor-pointer ${getEventColors(ev.type)}`}
                       >
+                        {ev.startTime && (
+                          <div className="text-[10px] md:text-xs opacity-70 flex items-center gap-0.5 mb-0.5">
+                            <Clock className="h-2.5 w-2.5" />
+                            {ev.startTime}{ev.endTime ? `〜${ev.endTime}` : ""}
+                          </div>
+                        )}
                         <div className="font-semibold">{ev.title}</div>
                         {ev.description && <div className="mt-1 text-[10px] md:text-xs opacity-80 border-t border-current pt-1">{ev.description}</div>}
                       </div>
@@ -541,8 +550,18 @@ export default function App() {
                 </select>
               </div>
               <div>
+                <label className="block text-sm font-medium text-slate-700 mb-1">時間（任意）</label>
+                <div className="flex items-center gap-2">
+                  <input type="time" value={formData.startTime} onChange={(e) => setFormData({ ...formData, startTime: e.target.value })}
+                    className="flex-1 rounded-md border border-slate-300 px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                  <span className="text-slate-500 text-sm shrink-0">〜</span>
+                  <input type="time" value={formData.endTime} onChange={(e) => setFormData({ ...formData, endTime: e.target.value })}
+                    className="flex-1 rounded-md border border-slate-300 px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                </div>
+              </div>
+              <div>
                 <label className="block text-sm font-medium text-slate-700 mb-1">メモ・詳細（任意）</label>
-                <textarea rows="3" placeholder="参加者や持ち物、詳細な時間など" value={formData.description} onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+                <textarea rows="3" placeholder="参加者や持ち物など" value={formData.description} onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                   className="w-full rounded-md border border-slate-300 px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none" />
               </div>
               <div className="pt-4 flex items-center justify-between gap-3 border-t border-slate-100">
